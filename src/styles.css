@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        color: black;
+        font-weight: 400;
+    }
+    input,
+    button,
+    textarea,
+    select {
+      font-family: "Poppins", sans-serif;
+      outline: none;
+    }
+}
+@layer components{
+    .wrap{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .layout-container{
+        max-width: 1200px;
+        width: 100%;
+        margin:0 auto;
+        text-align: center;
+    }
+}
+@layer utilities{
+    
+}
