@@ -2,33 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    body{
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        color: black;
-        font-weight: 400;
-    }
-    input,
-    button,
-    textarea,
-    select {
-      font-family: "Poppins", sans-serif;
-      outline: none;
-    }
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    box-sizing: border-box;
+    scrollbar-gutter: stable both-edges;
+
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    box-sizing: border-box;
+  }
+  /* cusstom scrollbar  */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid #ededed;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
 }
-@layer components{
-    .wrap{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .layout-container{
-        max-width: 1200px;
-        width: 100%;
-        margin:0 auto;
-        text-align: center;
-    }
+@layer components {
+  .wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .layout-container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
-@layer utilities{
-    
+@layer utilities {
+  .paragrap1 {
+    font-family: "Poppins", sans-serif;
+    color: #787878;
+    font-size: 12.75px;
+    text-transform: uppercase;
+  }
+  .search-input {
+    outline: none;
+    border-radius: 15px;
+    color: #454545;
+    border: 1px solid #716e6e71;
+    padding: 10px 50px 10px 20px;
+    font-family: "Poppins" sans-serif;
+    font-size: 15px;
+    width: 100%;
+  }
+  .link-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff8f9c;
+    transition: 0.3s;
+  }
+  .link-menu:hover::after {
+    width: 100%;
+  }
+  .button{
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding:10px 20px;
+    border-radius: 5px;
+    background-color: #ff8f9c;
+    text-transform: uppercase;
+  }
+  .button:hover{
+    background-color: #212121;
+  }
 }
