@@ -1,16 +1,405 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>Ecommerce</title>
-</head>
-<body>
-    <div class="wrap bg-red-400">
-        
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <section class="header-top hidden md:block border-b-[1px]">
+          <div
+            class="layout-container flex justify-between h-[50px] items-center"
+          >
+            <ul class="flex flex-row gap-2">
+              <li class="cursor-pointer bg-grayBg rounded-md">
+                <i class="text-gray-500 p-2 fa-brands fa-facebook"></i>
+              </li>
+              <li class="cursor-pointer bg-grayBg rounded-md">
+                <i class="text-gray-500 p-2 fa-brands fa-twitter"></i>
+              </li>
+              <li class="cursor-pointer bg-grayBg rounded-md">
+                <i class="text-gray-500 p-2 fa-brands fa-instagram"></i>
+              </li>
+              <li class="cursor-pointer bg-grayBg rounded-md">
+                <i class="text-gray-500 p-2 fa-brands fa-linkedin-in"></i>
+              </li>
+            </ul>
+            <p class="paragrap1">FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+            <div class="flex gap-3">
+              <select
+                class="bg-inherit border-[1px] p-1 cursor-pointer rounded-md"
+                name="money"
+                id="money"
+              >
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+              </select>
+              <select
+                class="bg-inherit border-[1px] p-1 cursor-pointer rounded-md"
+                name="language"
+                id="language"
+              >
+                <option value="vn">Vietnam</option>
+                <option value="eng">English</option>
+                <option value="japan">Japan</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="header-mid border-b">
+          <div
+            class="layout-container flex flex-col sm:flex-row gap-3 sm:gap-20 justify-between items-center py-5"
+          >
+            <img
+              class="w-[130px] h-[36px]"
+              src="./public/images/logo/logo.svg"
+              alt=""
+            />
+            <div class="relative w-full">
+              <input
+                class="search-input focus:border-[2px] focus:border-slate-600 box-border"
+                type="text"
+                placeholder="Enter your product name..."
+              />
+              <i
+                class="absolute top-[50%] right-5 translate-y-[-50%] fa-solid fa-magnifying-glass"
+              ></i>
+            </div>
+
+            <div class="gap-8 hidden md:flex">
+              <i
+                class="cursor-pointer text-[28px] text-gray-600 fa-regular fa-user"
+              ></i>
+              <div class="relative">
+                <i
+                  class="cursor-pointer text-[28px] text-gray-600 fa-regular fa-heart"
+                ></i>
+                <p
+                  class="text-xs text-white absolute py-1 px-1 leading-[10px] bg-red-400 rounded-xl -top-2 -right-2"
+                >
+                  0
+                </p>
+              </div>
+
+              <div class="relative">
+                <i
+                  class="cursor-pointer text-[28px] text-gray-600 fa-solid fa-bag-shopping"
+                ></i>
+                <p
+                  class="text-xs text-white absolute py-1 px-1 leading-[10px] bg-red-400 rounded-xl -top-2 -right-2"
+                >
+                  0
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="header-menu hidden md:block">
+          <div class="layout-container">
+            <ul class="flex gap-11 justify-center w-full relative">
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >categories</a
+                >
+                <div
+                  class="group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 absolute flex gap-3 rounded-md p-10 w-full left-0 border translate-y-14 opacity-0 invisible transition-all z-10 bg-white"
+                >
+                  <div class="flex flex-col text-left gap-4">
+                    <h2
+                      class="text-colorTitleLinkMenu text-base font-semibold border-b pb-2"
+                    >
+                      Electronics
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >Desktop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >Laptop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >Camera</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >table</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >headphone</a
+                        >
+                      </li>
+                    </ul>
+                    <img
+                      src="./public/images/electronics-banner-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col text-left gap-4">
+                    <h2
+                      class="text-colorTitleLinkMenu text-base font-semibold border-b pb-2"
+                    >
+                      Men's
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >formal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >casual</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >sports</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >sunglasses</a
+                        >
+                      </li>
+                    </ul>
+                    <img src="./public/images/mens-banner.jpg" alt="" />
+                  </div>
+                  <div class="flex flex-col text-left gap-4">
+                    <h2
+                      class="text-colorTitleLinkMenu text-base font-semibold border-b pb-2"
+                    >
+                      Women's
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >formal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >casual</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >perfume</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >cosmetics</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >bags</a
+                        >
+                      </li>
+                    </ul>
+                    <img src="./public/images/womens-banner.jpg" alt="" />
+                  </div>
+                  <div class="flex flex-col text-left gap-4">
+                    <h2
+                      class="text-colorTitleLinkMenu text-base font-semibold border-b pb-2"
+                    >
+                      Electronics
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >smart watch</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >smart TV</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >Keyboard</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >mouse</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="capitalize text-base text-colorTextLinkMenu hover:text-hoverLink transition"
+                          href="#"
+                          >microhone</a
+                        >
+                      </li>
+                    </ul>
+                    <img
+                      src="./public/images/electronics-banner-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >men's</a
+                >
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >women's</a
+                >
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >jewelry</a
+                >
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >perfume</a
+                >
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="py-5 block relative link-menu uppercase text-sm font-semibold text-[#454545] hover:text-[#ff8f9c] transition"
+                  href="#"
+                  >hot offers</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="header-slider ">
+          <div
+            class="layout-container flex  h-[300px] sm:h-[350px] md:h-[380px] w-full overflow-hidden gap-3 rounded-md scr scroll-smooth  pb-2 overscroll-contain hover:overflow-x-scroll overflow-y:hidden overla"
+          >
+            <div class="relative min-h-full min-w-full ">
+              <img
+                class="w-full h-full object-cover "
+                src="./public//images/banner-1.jpg"
+                alt=""
+              />
+              <div class="absolute flex flex-col gap-3 w-max text-left items-start top-2/4 -translate-y-2/4 left-24">
+                  <h2 class="text-[#ff8f9c] text-[28px] font-medium">Trending Item</h2>
+                  <h1 class="text-[#212121] text-[44px] leading-[44px] font-bold uppercase">Women's <br/> latest <br/> fashion sale</h1>
+                  <span class="inline-block text-[#787878] text-2xl font-medium">starting at $ <span class="text-4xl font-bold text-[#787878]">20</span>.00</span>
+                  <button class="button">SHOP Now</button>  
+              </div>
+            </div>
+            <div class="relative min-h-full min-w-full overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="./public//images/banner-2.jpg"
+                alt=""
+              />
+              <div class="absolute flex flex-col gap-3 w-max text-left items-start top-2/4 -translate-y-2/4 left-24">
+                  <h2 class="text-[#ff8f9c] text-[28px] font-medium">Trending Item</h2>
+                  <h1 class="text-[#212121] text-[44px] leading-[44px] font-bold uppercase">Women's <br/> latest <br/> fashion sale</h1>
+                  <span class="inline-block text-[#787878] text-2xl font-medium">starting at $ <span class="text-4xl font-bold text-[#787878]">20</span>.00</span>
+                  <button class="button">SHOP Now</button>  
+              </div>
+            </div>
+            <div class="relative min-h-full min-w-full overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="./public//images/banner-3.jpg"
+                alt=""
+              />
+              <div class="absolute flex flex-col gap-3 w-max text-left items-start top-2/4 -translate-y-2/4 left-24">
+                  <h2 class="text-[#ff8f9c] text-[28px] font-medium">Trending Item</h2>
+                  <h1 class="text-[#212121] text-[44px] leading-[44px] font-bold uppercase">Women's <br/> latest <br/> fashion sale</h1>
+                  <span class="inline-block text-[#787878] text-2xl font-medium">starting at $ <span class="text-4xl font-bold text-[#787878]">20</span>.00</span>
+                  <button class="button">SHOP Now</button>  
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
     </div>
-</body>
+  </body>
 </html>
