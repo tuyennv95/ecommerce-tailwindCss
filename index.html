@@ -1,16 +1,2717 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>Ecommerce</title>
-</head>
-<body>
-    <div class="wrap bg-red-400">
-        
+  </head>
+  <body>
+    <div class="wrap xs:px-[40px] sm:px-[40px] md:px-[80px]">
+      <header>
+        <section class="header-top hidden border-b-[1px] md:block">
+          <div
+            class="layout-container flex h-[50px] items-center justify-between"
+          >
+            <ul class="flex flex-row gap-2">
+              <li class="cursor-pointer rounded-md bg-grayBg">
+                <i class="fa-brands fa-facebook p-2 text-gray-500"></i>
+              </li>
+              <li class="cursor-pointer rounded-md bg-grayBg">
+                <i class="fa-brands fa-twitter p-2 text-gray-500"></i>
+              </li>
+              <li class="cursor-pointer rounded-md bg-grayBg">
+                <i class="fa-brands fa-instagram p-2 text-gray-500"></i>
+              </li>
+              <li class="cursor-pointer rounded-md bg-grayBg">
+                <i class="fa-brands fa-linkedin-in p-2 text-gray-500"></i>
+              </li>
+            </ul>
+            <p class="paragrap1">FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+            <div class="flex gap-3">
+              <select
+                class="cursor-pointer rounded-md border-[1px] bg-inherit p-1"
+                name="money"
+                id="money"
+              >
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+              </select>
+              <select
+                class="cursor-pointer rounded-md border-[1px] bg-inherit p-1"
+                name="language"
+                id="language"
+              >
+                <option value="vn">Vietnam</option>
+                <option value="eng">English</option>
+                <option value="japan">Japan</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="header-mid border-b">
+          <div
+            class="layout-container flex flex-col items-center justify-between gap-3 py-5 sm:flex-row sm:gap-20"
+          >
+            <img
+              class="h-[36px] w-[130px]"
+              src="./public/images/logo/logo.svg"
+              alt=""
+            />
+            <div class="relative w-full">
+              <input
+                class="search-input box-border focus:border-[2px] focus:border-slate-600"
+                type="text"
+                placeholder="Enter your product name..."
+              />
+              <i
+                class="fa-solid fa-magnifying-glass absolute top-[50%] right-5 translate-y-[-50%]"
+              ></i>
+            </div>
+
+            <div class="hidden gap-8 md:flex">
+              <i
+                class="fa-regular fa-user cursor-pointer text-[28px] text-gray-600"
+              ></i>
+              <div class="relative">
+                <i
+                  class="fa-regular fa-heart cursor-pointer text-[28px] text-gray-600"
+                ></i>
+                <p
+                  class="absolute -top-2 -right-2 rounded-xl bg-red-400 py-1 px-1 text-xs leading-[10px] text-white"
+                >
+                  0
+                </p>
+              </div>
+
+              <div class="relative">
+                <i
+                  class="fa-solid fa-bag-shopping cursor-pointer text-[28px] text-gray-600"
+                ></i>
+                <p
+                  class="absolute -top-2 -right-2 rounded-xl bg-red-400 py-1 px-1 text-xs leading-[10px] text-white"
+                >
+                  0
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="header-menu hidden md:block">
+          <div class="layout-container">
+            <ul class="relative flex w-full justify-center gap-11">
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >categories</a
+                >
+                <div
+                  class="invisible absolute left-0 z-10 flex w-full translate-y-14 gap-3 rounded-md border bg-white p-10 opacity-0 transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100"
+                >
+                  <div class="flex flex-col gap-4 text-left">
+                    <h2
+                      class="border-b pb-2 text-base font-semibold text-colorTitleLinkMenu"
+                    >
+                      Electronics
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >Desktop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >Laptop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >Camera</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >table</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >headphone</a
+                        >
+                      </li>
+                    </ul>
+                    <img
+                      src="./public/images/electronics-banner-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex flex-col gap-4 text-left">
+                    <h2
+                      class="border-b pb-2 text-base font-semibold text-colorTitleLinkMenu"
+                    >
+                      Men's
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >formal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >casual</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >sports</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >jacket</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >sunglasses</a
+                        >
+                      </li>
+                    </ul>
+                    <img src="./public/images/mens-banner.jpg" alt="" />
+                  </div>
+                  <div class="flex flex-col gap-4 text-left">
+                    <h2
+                      class="border-b pb-2 text-base font-semibold text-colorTitleLinkMenu"
+                    >
+                      Women's
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >formal</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >casual</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >perfume</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >cosmetics</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >bags</a
+                        >
+                      </li>
+                    </ul>
+                    <img src="./public/images/womens-banner.jpg" alt="" />
+                  </div>
+                  <div class="flex flex-col gap-4 text-left">
+                    <h2
+                      class="border-b pb-2 text-base font-semibold text-colorTitleLinkMenu"
+                    >
+                      Electronics
+                    </h2>
+                    <ul>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >smart watch</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >smart TV</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >Keyboard</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >mouse</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="text-base capitalize text-colorTextLinkMenu transition hover:text-hoverLink"
+                          href="#"
+                          >microhone</a
+                        >
+                      </li>
+                    </ul>
+                    <img
+                      src="./public/images/electronics-banner-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >men's</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >women's</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >jewelry</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >perfume</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="link-menu relative block py-5 text-sm font-semibold uppercase text-[#454545] transition hover:text-[#ff8f9c]"
+                  href="#"
+                  >hot offers</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="header-slider rounded-md">
+          <div
+            class="layout-container sm:aspect-3/2 flex aspect-4/3 max-h-[500px] w-full gap-3 overflow-hidden overflow-x-scroll overscroll-contain scroll-smooth rounded-md pb-2 sm:h-[350px] md:h-[380px]"
+          >
+            <div class="relative min-h-full min-w-full">
+              <img
+                class="h-full w-full object-cover object-right"
+                src="./public//images/banner-1.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+              >
+                <h2
+                  class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
+                >
+                  Trending Item
+                </h2>
+                <h1
+                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                >
+                  Women's <br class="hidden md:block" />
+                  latest <br />
+                  fashion sale
+                </h1>
+                <span
+                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  >starting at $
+                  <span class="text-4xl font-bold text-[#787878]">20</span
+                  >.00</span
+                >
+                <button class="button">SHOP Now</button>
+              </div>
+            </div>
+            <div class="relative min-h-full min-w-full">
+              <img
+                class="h-full w-full object-cover object-right"
+                src="./public//images/banner-2.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+              >
+                <h2
+                  class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
+                >
+                  Trending Item
+                </h2>
+                <h1
+                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                >
+                  Women's <br class="hidden md:block" />
+                  latest <br />
+                  fashion sale
+                </h1>
+                <span
+                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  >starting at $
+                  <span class="text-4xl font-bold text-[#787878]">20</span
+                  >.00</span
+                >
+                <button class="button">SHOP Now</button>
+              </div>
+            </div>
+            <div class="relative min-h-full min-w-full">
+              <img
+                class="h-full w-full object-cover object-right"
+                src="./public//images/banner-3.jpg"
+                alt=""
+              />
+              <div
+                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+              >
+                <h2
+                  class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
+                >
+                  Trending Item
+                </h2>
+                <h1
+                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                >
+                  Women's <br class="hidden md:block" />
+                  latest <br />
+                  fashion sale
+                </h1>
+                <span
+                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  >starting at $
+                  <span class="text-4xl font-bold text-[#787878]">20</span
+                  >.00</span
+                >
+                <button class="button">SHOP Now</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="header--slider-products my-8">
+          <div
+            class="layout-container flex w-full gap-[30px] overflow-x-scroll"
+          >
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/shorts.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/tee.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/coat.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/dress.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/glasses.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/hat.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/jacket.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+            <div
+              class="slider-product-item flex flex-row items-start gap-5 rounded-lg border p-4"
+            >
+              <div class="rounded-md bg-slate-300 p-2">
+                <img
+                  class="h-[40px] max-h-[40px] w-[40px] max-w-[40px]"
+                  src="./public/images/icons/jacket.svg"
+                  alt=""
+                />
+              </div>
+              <div class="flex w-full flex-row justify-between">
+                <div class="flex flex-col text-left">
+                  <h2
+                    class="w-max text-sm font-semibold uppercase text-[#212121]"
+                  >
+                    Dress & frock
+                  </h2>
+                  <a class="text-[13px] font-bold text-[#ff8f9c]" href="#"
+                    >Show All</a
+                  >
+                </div>
+                <p class="text-[11px] font-normal text-[#787878]">(53)</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+      <main>
+        <main class="categories">
+          <div class="layout-container flex flex-row gap-[40px]">
+            <!-- !slidebar menu start -->
+            <div class="hidden min-w-[23%] flex-col md:flex sticky top-8 left-0 mb-6">
+              <div
+                class="flex flex-col gap-5 rounded-xl border border-[#ededed] px-4 py-5"
+              >
+                <h2
+                  class="text-left text-[16px] font-semibold uppercase text-[#454545]"
+                >
+                  Category
+                </h2>
+                <ul class="flex flex-col justify-between gap-3">
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/dress.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Clothes
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/shoes.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Footwear
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Sports</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">45</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Formal</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">75</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Casual</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">35</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Safety Shows</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">26</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/jewelry.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Jewelry
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/perfume.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Perfume
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/cosmetics.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Cosmetics
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/glasses.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">
+                          Glasses
+                        </p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="slidebar-product-list flex cursor-pointer flex-col"
+                  >
+                    <div
+                      class="slidebar-product-item-parant flex w-full flex-row items-center justify-between"
+                    >
+                      <div class="flex gap-3">
+                        <div class="h-[20px] w-[20px]">
+                          <img
+                            class="h-full w-full"
+                            src="./public/images/icons/bag.svg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="text-[16px] font-bold text-[#787878]">Bags</p>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus text-sm text-[#787878]"></i>
+                        <i class="fa-solid fa-minus text-sm text-[#787878]"></i>
+                      </div>
+                    </div>
+                    <ul class="slidebar-product-item flex flex-col gap-2">
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="flex flex-row justify-between" href="#">
+                          <span class="text-[15px] text-[#212121a7]"
+                            >Shirt</span
+                          >
+                          <span class="text-[15px] text-[#212121a7]">300</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="mt-6">
+                <h2
+                  class="text-left text-base font-semibold uppercase text-[#454545]"
+                >
+                  best sellers
+                </h2>
+                <div class="mt-5 flex flex-col gap-5">
+                  <div class="flex gap-4 text-left">
+                    <a href="#"
+                      ><img
+                        class="h-[75px] w-[75px]"
+                        src="./public/images/products/1.jpg"
+                        alt=""
+                    /></a>
+                    <div>
+                      <a
+                        class="text-[15px] font-normal capitalize text-[#454545]"
+                        href="#"
+                        >Baby Fabric shoes</a
+                      >
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                      </div>
+                      <div>
+                        <span
+                          class="text-xs font-normal text-[#787878] line-through"
+                          >$5.00</span
+                        >
+                        <span class="text-[15px] font-semibold text-[#545454]"
+                          >$4.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-left">
+                    <a href="#"
+                      ><img
+                        class="h-[75px] w-[75px]"
+                        src="./public/images/products/4.jpg"
+                        alt=""
+                    /></a>
+                    <div>
+                      <a
+                        class="text-[15px] font-normal capitalize text-[#454545]"
+                        href="#"
+                        >Woolen hat for men</a
+                      >
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                      </div>
+                      <div>
+                        <span
+                          class="text-xs font-normal text-[#787878] line-through"
+                          >$5.00</span
+                        >
+                        <span class="text-[15px] font-semibold text-[#545454]"
+                          >$4.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-left">
+                    <a href="#"
+                      ><img
+                        class="h-[75px] w-[75px]"
+                        src="./public/images/products/2.jpg"
+                        alt=""
+                    /></a>
+                    <div>
+                      <a
+                        class="text-[15px] font-normal capitalize text-[#454545]"
+                        href="#"
+                        >Girls T-Shirt</a
+                      >
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                      </div>
+                      <div>
+                        <span
+                          class="text-xs font-normal text-[#787878] line-through"
+                          >$5.00</span
+                        >
+                        <span class="text-[15px] font-semibold text-[#545454]"
+                          >$4.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex gap-4 text-left">
+                    <a href="#"
+                      ><img
+                        class="h-[75px] w-[75px]"
+                        src="./public/images/products/3.jpg"
+                        alt=""
+                    /></a>
+                    <div>
+                      <a
+                        class="text-[15px] font-normal capitalize text-[#454545]"
+                        href="#"
+                        >Men's hoodies t-shirt</a
+                      >
+                      <div>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-[13px] font-normal text-[#f6a355]"
+                        ></i>
+                      </div>
+                      <div>
+                        <span
+                          class="text-xs font-normal text-[#787878] line-through"
+                          >$5.00</span
+                        >
+                        <span class="text-[15px] font-semibold text-[#545454]"
+                          >$4.00</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- !slidebar menu end -->
+
+            <!-- !slidebar product start -->
+            <div class="w-ful">
+              <!-- !category product top start -->
+
+              <div
+                class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+              >
+                <!-- !New arrivals Start -->
+                <div class="w-full">
+                  <h2
+                    class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
+                  >
+                    New Arrivals
+                  </h2>
+                  <div
+                    class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
+                  >
+                    <!-- !new arrivals col 1 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !new arrivals col 1 end -->
+                    <!-- !new arrivals col 2 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !new arrivals col 2 end -->
+                  </div>
+                </div>
+                <!-- !New arrival End -->
+                <!-- !Trending Start -->
+                <div class="w-full">
+                  <h2
+                    class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
+                  >
+                    Trending
+                  </h2>
+                  <div
+                    class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
+                  >
+                    <!-- !Trending col 1 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !Trending col 1 end -->
+                    <!-- !Trendingcol 2 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !Trending col 2 end -->
+                  </div>
+                </div>
+                <!-- !Trending End -->
+                <!-- !Toprated Start -->
+                <div class="w-full">
+                  <h2
+                    class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
+                  >
+                    Top Rated
+                  </h2>
+                  <div
+                    class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
+                  >
+                    <!-- !top rated col 1 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/clothes-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !top rated col 1 end -->
+                    <!-- !top rated col 2 start-->
+                    <div class="flex min-w-full flex-col items-center gap-5">
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-1.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-2.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-3.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
+                      >
+                        <img
+                          class="w-[70px]"
+                          src="./public/images/products/jacket-4.jpg"
+                          alt=""
+                        />
+                        <div class="overflow-hidden">
+                          <h2
+                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                          >
+                            Relaxed short fullddddd
+                          </h2>
+                          <span
+                            class="cursor-pointer text-sm font-normal text-[@212121] hover:text-[#ff8f9c]"
+                            >Clothes</span
+                          >
+                          <div>
+                            <span class="text-[15px] font-bold text-[#ff8f9c]"
+                              >$45.000</span
+                            >
+                            <span
+                              class="text-[13px] font-normal text-[#787878] line-through"
+                              >$12.00</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- !top rated col 2 end -->
+                  </div>
+                </div>
+                <!-- !Top rated  End -->
+
+                <!-- !============================== -->
+                <!-- <div>
+                    <h2 class="text-[17px] text-[#212121] font-semibold text-left border-b-[1px] pb-2">Trending</h2>
+                    <div>
+                      <div>
+                        <img src="./public/images/products/clothes-1.jpg" alt="">
+                        <div>
+                          <h2>RElaxed short full</h2>
+                          <span>Clothes</span>
+                          <div>
+                            <span class="line-through">$45.00</span>
+                            <span>$12.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h2 class="text-[17px] text-[#212121] font-semibold text-left border-b-[1px] pb-2">Top rated</h2>
+                    <div>
+                      <div>
+                        <img src="./public/images/products/clothes-1.jpg" alt="">
+                        <div>
+                          <h2>RElaxed short full</h2>
+                          <span>Clothes</span>
+                          <div>
+                            <span class="line-through">$45.00</span>
+                            <span>$12.00</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+              </div>
+              <!-- !category product top end -->
+              <!-- !deal the day start -->
+
+              <div class="mt-5">
+                <h2
+                  class="border-b-[1px] pb-2 text-left text-19 font-semibold capitalize text-[#212121]"
+                >
+                  Deal of the day
+                </h2>
+                <!-- !deal of product start  -->
+                <div
+                  class="mt-6 flex w-full gap-5 overflow-hidden overflow-x-scroll"
+                >
+                  <!-- *=================== -->
+                  <div
+                    class="flex min-w-full flex-col sm:flex-row items-center rounded-xl border p-7"
+                  >
+                    <img
+                      class="max-w-[50%]"
+                      src="./public/images/products/shampoo.jpg"
+                      alt=""
+                    />
+                    <div class="flex flex-col gap-4 text-left">
+                      <div class="flex">
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                      </div>
+                      <a class="text-15 font-bold text-colorHeading" href=""
+                        >SHAMPOO, CONDITIONER & FACEWASH PACKS</a
+                      >
+                      <span class="text-15 font-light text-colorParagrap"
+                        >Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                        dolor dolor sit amet consectetur Lorem ipsum dolor</span
+                      >
+                      <div class="flex gap-5">
+                        <span class="text-21 font-bold text-colorHong"
+                          >$150.00</span
+                        >
+                        <span class="text-21 text-colorParagrap line-through"
+                          >$200.00</span
+                        >
+                      </div>
+                      <button class="button">ADD TO CART</button>
+                      <div>
+                        <div class="flex justify-between">
+                          <span class="text-13 font-normal text-colorHeading"
+                            >ALREADY SOLD:
+                            <span class="text-13 font-bold text-colorHeading"
+                              >20</span
+                            ></span
+                          >
+                          <span class="text-13 font-normal text-colorHeading"
+                            >AVAILABLE:
+                            <span class="text-13 font-bold text-colorHeading"
+                              >20</span
+                            ></span
+                          >
+                        </div>
+                        <p
+                          class="relative h-3 rounded-lg bg-backgroundGray after:absolute after:mt-[2px] after:h-2 after:w-1/2 after:rounded-lg after:bg-colorHong after:content-['']"
+                        >
+                          &nbsp;
+                        </p>
+                      </div>
+                      <div>
+                        <span
+                          class="text-13 font-semibold uppercase text-colorHeading"
+                          >HURRY UP! OFFER ENDS IN:</span
+                        >
+                        <div class="flex flex-row gap-5">
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >360</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Days</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >24</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Hours</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >59</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Min</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >00</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Sec</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- *=================== -->
+                  <!-- *=================== -->
+                  <div
+                    class="flex min-w-full flex-col sm:flex-row items-center rounded-xl border p-7"
+                  >
+                    <img
+                      class="max-w-[50%]"
+                      src="./public/images/products/jewellery-1.jpg"
+                      alt=""
+                    />
+                    <div class="flex flex-col gap-4 text-left">
+                      <div class="flex">
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                        <i
+                          class="fa-solid fa-star text-base font-normal text-colorYellow"
+                        ></i>
+                      </div>
+                      <a class="text-15 font-bold text-colorHeading" href=""
+                        >ROSE GOLD DIAMONDS EARRING</a
+                      >
+                      <span class="text-15 font-light text-colorParagrap"
+                        >Lorem ipsum dolor sit amet consectetur Lorem ipsum
+                        dolor dolor sit amet consectetur Lorem ipsum dolor</span
+                      >
+                      <div class="flex gap-5">
+                        <span class="text-21 font-bold text-colorHong"
+                          >$1500.00</span
+                        >
+                        <span class="text-21 text-colorParagrap line-through"
+                          >$2000.00</span
+                        >
+                      </div>
+                      <button class="button">ADD TO CART</button>
+                      <div>
+                        <div class="flex justify-between">
+                          <span class="text-13 font-normal text-colorHeading"
+                            >ALREADY SOLD:
+                            <span class="text-13 font-bold text-colorHeading"
+                              >20</span
+                            ></span
+                          >
+                          <span class="text-13 font-normal text-colorHeading"
+                            >AVAILABLE:
+                            <span class="text-13 font-bold text-colorHeading"
+                              >20</span
+                            ></span
+                          >
+                        </div>
+                        <p
+                          class="relative h-3 rounded-lg bg-backgroundGray after:absolute after:mt-[2px] after:h-2 after:w-1/2 after:rounded-lg after:bg-colorHong after:content-['']"
+                        >
+                          &nbsp;
+                        </p>
+                      </div>
+                      <div>
+                        <span
+                          class="text-13 font-semibold uppercase text-colorHeading"
+                          >HURRY UP! OFFER ENDS IN:</span
+                        >
+                        <div class="flex flex-row gap-5">
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >360</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Days</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >24</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Hours</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >59</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Min</span
+                            >
+                          </div>
+                          <div
+                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                          >
+                            <span class="text-19 font-medium text-colorHeading"
+                              >00</span
+                            >
+                            <span class="text-11 font-medium text-[#545454]"
+                              >Sec</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- *=================== -->
+                </div>
+
+                <!-- !deal of product end  -->
+              </div>
+              <!-- !deal the day end -->
+
+              <!-- !new product start-->
+              <div class="mt-10">
+                <h2
+                  class="border-b-[1px] pb-5 text-left text-17 font-semibold capitalize text-colorHeading"
+                >
+                  new products
+                </h2>
+                <!-- ========== -->
+                <div class="mt-5 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-3.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-4.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shirt-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shirt-2.jpg" alt="" />
+                      <span class="new">new</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Shirt</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-5.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-6.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/clothes-3.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/clothes-4.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Skirt</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shoe-2.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shoe-2_1.jpg" alt="" />
+                      <span class="new">new</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Casual</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/watch-3.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/watch-4.jpg" alt="" />
+                      <span class="saleText">Sale</span>
+
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Watchs</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/watch-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/watch-2.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Watches</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/party-wear-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/party-wear-2.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">party wear</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-2.jpg" alt="" />
+                      <span class="saleText">Sale</span>
+
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/sports-2.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/sports-4.jpg" alt="" />
+                      <span class="saleNumber">12%</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Sports</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shoe-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shoe-1_1.jpg" alt="" />
+                      <span class="new">new</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                  <!-- !productItem start  -->
+                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
+                    <div class="relative ">
+                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shorts-1.jpg" alt="" />
+                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shorts-2.jpg" alt="" />
+                      <span class="saleText">Sale</span>
+                    </div>
+                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Shorts</h2></a>
+                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <div class="flex">
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-base font-normal text-colorYellow"
+                      ></i>
+                    </div>
+                    <div class="flex gap-5">
+                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
+                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                    </div>
+                  </div>
+                  <!-- !productItem  end -->
+                </div>
+                <!-- ============ -->
+              </div>
+              <!-- !new product end-->
+            </div>
+            <!-- !slidebar product end -->
+          </div>
+        </main>
+      </main>
     </div>
-</body>
+    <script src="./public/script.js"></script>
+  </body>
 </html>

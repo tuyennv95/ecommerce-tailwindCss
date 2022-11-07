@@ -2,33 +2,196 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    body{
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        color: black;
-        font-weight: 400;
-    }
-    input,
-    button,
-    textarea,
-    select {
-      font-family: "Poppins", sans-serif;
-      outline: none;
-    }
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    width: 100vw;
+    height: 100vh;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+    box-sizing: border-box;
+    scrollbar-gutter: stable both-edges;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    box-sizing: border-box;
+  }
+  /* cusstom scrollbar  */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid #ededed;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
 }
-@layer components{
-    .wrap{
-        max-width: 1440px;
-        margin: 0 auto;
-    }
-    .layout-container{
-        max-width: 1200px;
-        width: 100%;
-        margin:0 auto;
-        text-align: center;
-    }
+@layer components {
+  .wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .layout-container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
-@layer utilities{
-    
+@layer utilities {
+  .paragrap1 {
+    font-family: "Poppins", sans-serif;
+    color: #787878;
+    font-size: 12.75px;
+    text-transform: uppercase;
+  }
+  .search-input {
+    outline: none;
+    border-radius: 15px;
+    color: #454545;
+    border: 1px solid #716e6e71;
+    padding: 10px 50px 10px 20px;
+    font-family: "Poppins" sans-serif;
+    font-size: 15px;
+    width: 100%;
+  }
+  .link-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff8f9c;
+    transition: 0.3s;
+  }
+  .link-menu:hover::after {
+    width: 100%;
+  }
+  .button {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ff8f9c;
+    text-transform: uppercase;
+    width: max-content;
+  }
+  .button:hover {
+    background-color: #212121;
+  }
+  @media screen and (max-width: 600px) {
+    .button {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 16px;
+    }
+  }
+  @media (max-width: 1400px) {
+    .slider-product-item {
+      min-width: calc(25% - 22.5px);
+    }
+  }
+  @media (max-width: 1200px) {
+    .slider-product-item {
+      min-width: calc(33.3% - 20px);
+    }
+  }
+  @media (max-width: 960px) {
+    .slider-product-item {
+      min-width: calc(50% - 15px);
+    }
+  }
+  @media (max-width: 600px) {
+    .slider-product-item {
+      min-width: 100%;
+    }
+  }
+  .slidebar-product-item {
+    border-top: 1px solid rgba(128, 128, 128, 0.323);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+  }
+  .slidebar-product-item.active {
+    max-height: 122px;
+    padding: 10px 0 8px;
+    visibility: visible;
+  }
+  .slidebar-product-item-parant.active .fa-plus,
+  .slidebar-product-item-parant .fa-minus {
+    display: none;
+  }
+  .slidebar-product-item-parant.active .fa-minus,
+  .slidebar-product-item-parant .fa-plus {
+    display: block;
+  }
+  .saleNumber{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 30;
+    /* border: 1px solid #46c389; */
+    padding:2px 5px;
+    background-color: #46c389;
+    color:white;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+  .saleText{
+      position: absolute;
+      top:0;
+      left: -50px;
+      z-index: 20;
+      padding:5px 50px;
+      background-color: black;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+  }
+  .new{
+      position: absolute;
+      top:0;
+      left: -50px;
+      z-index: 20;
+      padding:5px 50px;
+      background-color: #FF8F9C;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transform: rotate(-45deg);
+  }
 }
