@@ -9,6 +9,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <title>Ecommerce</title>
   </head>
   <body>
@@ -650,10 +658,12 @@
         </section>
       </header>
       <main>
-        <main class="categories">
+        <section class="categories">
           <div class="layout-container flex flex-row gap-[40px]">
             <!-- !slidebar menu start -->
-            <div class="hidden min-w-[23%] flex-col md:flex sticky top-8 left-0 mb-6">
+            <div
+              class="sticky top-8 left-0 mb-6 hidden min-w-[23%] flex-col md:flex"
+            >
               <div
                 class="flex flex-col gap-5 rounded-xl border border-[#ededed] px-4 py-5"
               >
@@ -2073,7 +2083,7 @@
                 >
                   <!-- *=================== -->
                   <div
-                    class="flex min-w-full flex-col sm:flex-row items-center rounded-xl border p-7"
+                    class="flex min-w-full flex-col items-center rounded-xl border p-7 sm:flex-row"
                   >
                     <img
                       class="max-w-[50%]"
@@ -2188,7 +2198,7 @@
                   <!-- *=================== -->
                   <!-- *=================== -->
                   <div
-                    class="flex min-w-full flex-col sm:flex-row items-center rounded-xl border p-7"
+                    class="flex min-w-full flex-col items-center rounded-xl border p-7 sm:flex-row"
                   >
                     <img
                       class="max-w-[50%]"
@@ -2315,16 +2325,36 @@
                   new products
                 </h2>
                 <!-- ========== -->
-                <div class="mt-5 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <div
+                  class="mt-5 grid grid-cols-1 gap-5 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                >
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-3.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-4.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/jacket-3.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/jacket-4.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Jacket
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2343,20 +2373,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shirt-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shirt-2.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/shirt-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/shirt-2.jpg"
+                        alt=""
+                      />
                       <span class="new">new</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Shirt</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Shirt
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2375,20 +2428,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-5.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-6.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/jacket-5.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/jacket-6.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Jacket
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2407,20 +2483,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/clothes-3.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/clothes-4.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/clothes-3.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/clothes-4.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Skirt</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Skirt
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2439,20 +2538,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shoe-2.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shoe-2_1.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/shoe-2.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/shoe-2_1.jpg"
+                        alt=""
+                      />
                       <span class="new">new</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Casual</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Casual
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2471,21 +2593,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/watch-3.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/watch-4.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/watch-3.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/watch-4.jpg"
+                        alt=""
+                      />
                       <span class="saleText">Sale</span>
-
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Watchs</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Watchs
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2504,20 +2648,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/watch-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/watch-2.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/watch-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/watch-2.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Watches</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Watches
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2536,20 +2703,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/party-wear-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/party-wear-2.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/party-wear-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/party-wear-2.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">party wear</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        party wear
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2568,21 +2758,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/jacket-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/jacket-2.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/jacket-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/jacket-2.jpg"
+                        alt=""
+                      />
                       <span class="saleText">Sale</span>
-
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Jacket
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2601,20 +2813,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/sports-2.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/sports-4.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/sports-2.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/sports-4.jpg"
+                        alt=""
+                      />
                       <span class="saleNumber">12%</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Sports</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Sports
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2633,20 +2868,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shoe-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shoe-1_1.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/shoe-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/shoe-1_1.jpg"
+                        alt=""
+                      />
                       <span class="new">new</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Jacket</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Jacket
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2665,20 +2923,43 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
                   <!-- !productItem start  -->
-                  <div class="group text-left flex flex-col gap-3 border p-5 rounded-xl overflow-hidden">
-                    <div class="relative ">
-                      <img class="w-full h-full object-cover transition-all relative z-20 group-hover:opacity-0" src="./public/images/products/shorts-1.jpg" alt="" />
-                      <img class="w-full h-full object-cover transition-all absolute top-0 z-10 left-0 opacity-0 group-hover:opacity-100 group-hover:scale-110 " src="./public/images/products/shorts-2.jpg" alt="" />
+                  <div
+                    class="group flex flex-col gap-3 overflow-hidden rounded-xl border p-5 text-left"
+                  >
+                    <div class="relative">
+                      <img
+                        class="relative z-20 h-full w-full object-cover transition-all group-hover:opacity-0"
+                        src="./public/images/products/shorts-1.jpg"
+                        alt=""
+                      />
+                      <img
+                        class="absolute top-0 left-0 z-10 h-full w-full object-cover opacity-0 transition-all group-hover:scale-110 group-hover:opacity-100"
+                        src="./public/images/products/shorts-2.jpg"
+                        alt=""
+                      />
                       <span class="saleText">Sale</span>
                     </div>
-                    <a href=""><h2 class="text-13 text-colorHong font-medium uppercase">Shorts</h2></a>
-                    <a href=""><p class="text-sm font-light capitalize w-[80%]">Mens Winter Leathers Jackets</p></a>
+                    <a href=""
+                      ><h2 class="text-13 font-medium uppercase text-colorHong">
+                        Shorts
+                      </h2></a
+                    >
+                    <a href=""
+                      ><p class="w-[80%] text-sm font-light capitalize">
+                        Mens Winter Leathers Jackets
+                      </p></a
+                    >
                     <div class="flex">
                       <i
                         class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2697,8 +2978,13 @@
                       ></i>
                     </div>
                     <div class="flex gap-5">
-                      <span class="text-15 text-colorHeading font-bold">$48.00</span>
-                      <span class="text-15 text-colorParagrap font-normal line-through">$75.00</span>
+                      <span class="text-15 font-bold text-colorHeading"
+                        >$48.00</span
+                      >
+                      <span
+                        class="text-15 font-normal text-colorParagrap line-through"
+                        >$75.00</span
+                      >
                     </div>
                   </div>
                   <!-- !productItem  end -->
@@ -2709,7 +2995,196 @@
             </div>
             <!-- !slidebar product end -->
           </div>
-        </main>
+        </section>
+        <!-- ! testimonial start -->
+        <section
+          class="testimoniala layout-container mt-10 flex flex-row flex-wrap items-stretch gap-[30px] justify-center"
+        >
+          <!-- *testimonial col 1 start -->
+          <div
+            class="w-full min-w-full md:w-[calc(50%-20px)] md:min-w-[calc(50%-20px)] lg:w-[calc(25%-20px)] lg:min-w-[calc(25%-20px)]"
+          >
+            <h2
+              class="mb-[30px] border-b-[1px] pb-[10px] text-left text-17 font-semibold capitalize text-colorHeading"
+            >
+              Testimonial
+            </h2>
+            <div
+              class="flex flex-col items-center gap-2 rounded-xl border py-[30px] px-5 text-center"
+            >
+              <img
+                class="h-[80px] w-[80px] rounded-[50%]"
+                src="./public//images/testimonial-1.jpg"
+                alt=""
+              />
+              <p class="text-17 font-bold uppercase text-colorParagrap">
+                ALan doe
+              </p>
+              <p class="text-15 font-normal capitalize text-colorTitleLinkMenu">
+                CEO & Founder invision
+              </p>
+              <div>
+                <img
+                  class="h-[26px]"
+                  src="./public/images/icons/quotes.svg"
+                  alt=""
+                />
+              </div>
+              <p class="max-w-[70%] text-15 font-normal text-colorParagrap">
+                Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor
+                sit amet.
+              </p>
+            </div>
+          </div>
+          <!-- *testimonial col 1 end -->
+          <!-- *testimonial col 2 start -->
+
+          <div
+            class="relative flex  items-center justify-center rounded-3xl md:w-[calc(50%-20px)] md:min-w-[calc(50%-20px)] lg:w-[calc(50%-20px)] lg:min-w-[calc(50%-20px)]"
+          >
+            <div class="">
+              <img
+                class="h-full w-full max-w-full max-h-full rounded-2xl"
+                src="./public/images/cta-banner.jpg"
+                alt=""
+              />
+            </div>
+            <a
+              class="absolute flex flex-col items-center gap-3 rounded-lg border bg-[#fcfbfac8] text-center py-7 px-6"
+              href=""
+            >
+              <p
+                class="w-max rounded-lg bg-black py-1 px-2 text-15 font-semibold uppercase text-[#ffffff]"
+              >
+                25% discount
+              </p>
+              <h2
+                class="w-[50%] text-[26px] font-bold capitalize text-colorHeading"
+              >
+                Summer collection
+              </h2>
+              <span class="text-17 font-normal capitalize text-colorParagrap"
+                >starting @ $10</span
+              >
+              <p class="text-17 font-bold uppercase text-colorParagrap">
+                Shop now
+              </p>
+            </a>
+          </div>
+          <!-- *testimonial col 2 end -->
+          <!-- *testimonial col 3 start-->
+
+          <div
+            class="w-full min-w-full lg:w-[calc(25%-20px)] lg:min-w-[calc(25%-20px)]"
+          >
+            <h2
+              class="mb-[30px] border-b-[1px] pb-[10px] text-left text-17 font-semibold capitalize text-colorHeading"
+            >
+              Our services
+            </h2>
+            <div
+              class=" flex flex-row flex-wrap items-center lg:gap-4 gap-[30px] md:gap-0 rounded-lg border p-[30px] lg:justify-start justify-center"
+            >
+              <a
+                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                href=""
+              >
+                <ion-icon
+                  name="boat-outline"
+                  class="text-35 font-normal text-colorHong transition group-hover:text-colorHeading"
+                ></ion-icon>
+                <div class="">
+                  <h3
+                    class="text-15 font-semibold capitalize text-colorParagrap"
+                  >
+                    Worldwide Delivery
+                  </h3>
+                  <p class="text-13 font-normal capitalize text-colorParagrap">
+                    For Order Over $100
+                  </p>
+                </div>
+              </a>
+              <a
+                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                href=""
+              >
+                <ion-icon
+                  name="rocket-outline"
+                  class="text-35 font-normal text-colorHong transition group-hover:text-colorHeading"
+                ></ion-icon>
+                <div class="">
+                  <h3
+                    class="text-15 font-semibold capitalize text-colorParagrap"
+                  >
+                    Next Day Delivery
+                  </h3>
+                  <p class="text-13 font-normal capitalize text-colorParagrap">
+                    UK Orders Only
+                  </p>
+                </div>
+              </a>
+              <a
+                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                href=""
+              >
+                <ion-icon
+                  name="call-outline"
+                  class="text-35 font-normal text-colorHong transition group-hover:text-colorHeading"
+                ></ion-icon>
+                <div class="">
+                  <h3
+                    class="text-15 font-semibold capitalize text-colorParagrap"
+                  >
+                    Best Online Support
+                  </h3>
+                  <p class="text-13 font-normal capitalize text-colorParagrap">
+                    Hours: 8AM - 11PM
+                  </p>
+                </div>
+              </a>
+              <a
+                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                href=""
+              >
+                <ion-icon
+                  name="arrow-undo-outline"
+                  class="text-35 font-normal text-colorHong transition group-hover:text-colorHeading"
+                ></ion-icon>
+                <div class="">
+                  <h3
+                    class="text-15 font-semibold capitalize text-colorParagrap"
+                  >
+                    Return Policy
+                  </h3>
+                  <p class="text-13 font-normal capitalize text-colorParagrap">
+                    Easy & Free Return
+                  </p>
+                </div>
+              </a>
+              <a
+                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                href=""
+              >
+                <ion-icon
+                  name="ticket-outline"
+                  class="text-35 font-normal text-colorHong transition group-hover:text-colorHeading"
+                ></ion-icon>
+                <div class="">
+                  <h3
+                    class="text-15 font-semibold capitalize text-colorParagrap"
+                  >
+                    30% Money Back
+                  </h3>
+                  <p class="text-13 font-normal capitalize text-colorParagrap">
+                    For Order Over $100
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- *testimonial col 3 end -->
+        </section>
+        <!-- ! testimonial end -->
       </main>
     </div>
     <script src="./public/script.js"></script>
