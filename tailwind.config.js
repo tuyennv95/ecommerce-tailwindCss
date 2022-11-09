@@ -15,6 +15,7 @@ module.exports = {
         colorHong: "#ff8f9c",
         colorYellow: "#f6a355",
         backgroundGray:'#ededed',
+        colorBack: "#212121",
       },
       fontSize:{
           "1":"1px",
@@ -29,9 +30,9 @@ module.exports = {
       },
       screens: {
         xs: "480px",
-        sm: "600px",
-        md: "960px",
-        lg: "1200px",
+        sm: "640px",
+        md: "768px",
+        lg: "1280px",
         xl: "1536px",
       },
       aspectRatio: {

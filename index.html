@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -19,14 +23,97 @@
     ></script>
     <title>Ecommerce</title>
   </head>
-  <body>
-    <div class="wrap xs:px-[40px] sm:px-[40px] md:px-[80px]">
+  <body class=" w-full h-full">
+    <div
+      class="invisible fixed top-0 left-0 z-40 h-screen w-screen bg-backgroundGray opacity-0 transition"
+    >
+      sffffffffffffs
+    </div>
+    <!-- !---------MOda start-------- -->
+    <div
+      class="moda pointer-events-none invisible fixed top-0 left-0 z-[50] flex h-screen w-screen items-center justify-center opacity-0"
+      modaConatier
+    >
+      <div
+        class="absolute top-0 left-0 z-[51] h-full w-full bg-[#7c5f5fb5]"
+        moda-over
+      ></div>
+      <div
+        class="scaleIn relative z-[52] flex w-[70%] flex-col gap-3 rounded-lg bg-white px-8 py-8 sm:w-fit"
+      >
+        <h2 class="text-19 font-semibold capitalize text-[#454545]">
+          Subscribe Newsletter.
+        </h2>
+        <p class="text-15 font-normal text-colorParagrap">
+          Subscribe the Anon to get latest products and discount update.
+        </p>
+        <input
+          class="w-full rounded-md border py-2 pl-3 outline-none"
+          placeholder="Email Address..."
+          type="text"
+        />
+        <button class="button">Subscribe</button>
+        <i
+          class="fa fa-times absolute top-3 right-3 z-[70] cursor-pointer rounded-[5px] bg-colorHong px-2 py-1 text-white"
+          aria-hidden="true"
+          buttonClose
+        ></i>
+      </div>
+    </div>
+    <!-- !---------MOda and-------- -->
+
+    <!-- !noti start -->
+    <div
+      id="notiToat"
+      class="fixed md:bottom-4 bottom-[80px] z-50 flex max-w-[300px] translate-x-[-500px] gap-3 rounded-r-md border border-colorHong bg-white p-2 pl-5 transition"
+    >
+      <img id="toatImg" class="max-w-[30%]" src="" alt="" />
+      <div class="flex flex-col justify-center">
+        <h2
+          id="phone"
+          class="text-15 font-normal tracking-widest text-colorHeading"
+        >
+          0989554xxx
+        </h2>
+        <p id="nameProduct" class="fonr-medium text-15 text-[#454545]"></p>
+        <span
+          id="minutes"
+          class="text-xs font-normal text-colorParagrap"
+        ></span>
+      </div>
+      <i
+        class="fa fa-times absolute top-3 right-3 cursor-pointer rounded-[5px] bg-colorHong px-2 py-1 text-white"
+        aria-hidden="true"
+        buttonCloseToat
+      ></i>
+    </div>
+    <!-- !noti end -->
+    <div class="nav-bottom w-full  bg-white max-w-[500px] items-center fixed bottom-0 z-50 rounded-t-lg border block lg:hidden">
+      <ul class="flex items-center justify-around px-3 py-3">
+        <li>
+          <button><ion-icon class="text-[35px]" name="menu-outline"></ion-icon></button>
+        </li>
+        <li>
+          <button><ion-icon class="text-[35px]" name="bag-handle-outline"></ion-icon></button>
+        </li>
+        <li>
+          <button><ion-icon class="text-[35px]" name="home-outline"></ion-icon></button>
+        </li>
+        <li>
+          <button><ion-icon class="text-[35px]" name="heart-outline"></ion-icon></button>
+        </li>
+        <li>
+          <button><ion-icon class="text-[35px]" name="grid-outline"></ion-icon></button>
+        </li>
+      </ul>
+    </div>
+    <div class="wrap px-[10px] sm:px-[20px] md:px-[40px]">
       <header>
-        <section class="header-top hidden border-b-[1px] md:block">
+        <section class="header-top border-b-[1px]">
           <div
             class="layout-container flex h-[50px] items-center justify-between"
           >
-            <ul class="flex flex-row gap-2">
+            <ul class="hidden flex-row gap-2 lg:flex">
               <li class="cursor-pointer rounded-md bg-grayBg">
                 <i class="fa-brands fa-facebook p-2 text-gray-500"></i>
               </li>
@@ -41,7 +128,7 @@
               </li>
             </ul>
             <p class="paragrap1">FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
-            <div class="flex gap-3">
+            <div class="hidden gap-3 lg:flex">
               <select
                 class="cursor-pointer rounded-md border-[1px] bg-inherit p-1"
                 name="money"
@@ -82,7 +169,7 @@
               ></i>
             </div>
 
-            <div class="hidden gap-8 md:flex">
+            <div class="hidden gap-8 lg:flex">
               <i
                 class="fa-regular fa-user cursor-pointer text-[28px] text-gray-600"
               ></i>
@@ -110,7 +197,7 @@
             </div>
           </div>
         </section>
-        <section class="header-menu hidden md:block">
+        <section class="header-menu hidden lg:block">
           <div class="layout-container">
             <ul class="relative flex w-full justify-center gap-11">
               <li>
@@ -373,22 +460,22 @@
                 alt=""
               />
               <div
-                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+                class="absolute top-2/4 left-[50%] flex w-max max-w-[80%] -translate-y-2/4 translate-x-[-50%] flex-col items-start gap-1 border bg-slate-100 py-4 pl-4 pr-10 text-left opacity-80 transition-all xs:left-[15px] xs:translate-x-0 xs:rounded-2xl sm:left-[25px] sm:border-none sm:bg-inherit md:left-20 md:gap-3"
               >
                 <h2
                   class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
                 >
-                  Trending Item
+                  Trendi14 Item
                 </h2>
                 <h1
-                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                  class="text-[16px] font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
                 >
                   Women's <br class="hidden md:block" />
                   latest <br />
                   fashion sale
                 </h1>
                 <span
-                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  class="hidden text-xl text-[#787878] xs:inline-block md:text-2xl md:font-medium"
                   >starting at $
                   <span class="text-4xl font-bold text-[#787878]">20</span
                   >.00</span
@@ -403,7 +490,7 @@
                 alt=""
               />
               <div
-                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+                class="absolute top-2/4 left-[50%] flex w-max max-w-[80%] -translate-y-2/4 translate-x-[-50%] flex-col items-start gap-1 border bg-slate-100 py-4 pl-4 pr-10 text-left opacity-80 transition-all xs:left-[15px] xs:translate-x-0 xs:rounded-2xl sm:left-[25px] sm:border-none sm:bg-inherit md:left-20 md:gap-3"
               >
                 <h2
                   class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
@@ -411,14 +498,14 @@
                   Trending Item
                 </h2>
                 <h1
-                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                  class="text-[16px] font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
                 >
                   Women's <br class="hidden md:block" />
                   latest <br />
                   fashion sale
                 </h1>
                 <span
-                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  class="hidden text-xl text-[#787878] xs:inline-block md:text-2xl md:font-medium"
                   >starting at $
                   <span class="text-4xl font-bold text-[#787878]">20</span
                   >.00</span
@@ -433,7 +520,7 @@
                 alt=""
               />
               <div
-                class="absolute top-2/4 flex w-max -translate-y-2/4 flex-col items-start gap-2 text-left opacity-80 transition-all xs:left-[40px] xs:rounded-2xl xs:border xs:bg-slate-100 xs:py-4 xs:pl-4 xs:pr-8 sm:left-[60px] sm:border-none sm:bg-inherit md:left-24 md:gap-3"
+                class="absolute top-2/4 left-[50%] flex w-max max-w-[80%] -translate-y-2/4 translate-x-[-50%] flex-col items-start gap-1 border bg-slate-100 py-4 pl-4 pr-10 text-left opacity-80 transition-all xs:left-[15px] xs:translate-x-0 xs:rounded-2xl sm:left-[25px] sm:border-none sm:bg-inherit md:left-20 md:gap-3"
               >
                 <h2
                   class="text-[#ff8f9c] xs:text-[20px] xs:font-light sm:text-[24px] sm:font-normal md:text-[28px] md:font-medium"
@@ -441,14 +528,14 @@
                   Trending Item
                 </h2>
                 <h1
-                  class="font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
+                  class="text-[16px] font-bold uppercase text-[#212121] xs:text-[28px] xs:leading-[40px] sm:text-[36px] sm:leading-[42px] md:text-[44px] md:leading-[44px]"
                 >
                   Women's <br class="hidden md:block" />
                   latest <br />
                   fashion sale
                 </h1>
                 <span
-                  class="inline-block text-xl text-[#787878] md:text-2xl md:font-medium"
+                  class="hidden text-xl text-[#787878] sm:block md:text-2xl md:font-medium"
                   >starting at $
                   <span class="text-4xl font-bold text-[#787878]">20</span
                   >.00</span
@@ -656,13 +743,14 @@
             </div>
           </div>
         </section>
+       
       </header>
       <main>
         <section class="categories">
-          <div class="layout-container flex flex-row gap-[40px]">
+          <div class="layout-container flex flex-row gap-[30px] ">
             <!-- !slidebar menu start -->
             <div
-              class="sticky top-8 left-0 mb-6 hidden min-w-[23%] flex-col md:flex"
+              class="sticky top-0 left-0 bottom-0 mb-6 hidden min-w-[23%] flex-col lg:flex bg-white"
             >
               <div
                 class="flex flex-col gap-5 rounded-xl border border-[#ededed] px-4 py-5"
@@ -1256,14 +1344,16 @@
             <!-- !slidebar menu end -->
 
             <!-- !slidebar product start -->
-            <div class="w-ful">
+            <div class="w-ful min-w-full lg:w-[calc(75%)] lg:min-w-[calc(75%)]">
               <!-- !category product top start -->
 
               <div
-                class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3"
+                class="flex w-full flex-row flex-wrap justify-center gap-[20px]"
               >
                 <!-- !New arrivals Start -->
-                <div class="w-full">
+                <div
+                  class="w-full min-w-full md:w-[calc(50%-10px)] md:min-w-[calc(50%-10px)] lg:w-[calc(33.33%-13.33px)] lg:min-w-[calc(33.33%-13.33px)]"
+                >
                   <h2
                     class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
                   >
@@ -1273,18 +1363,20 @@
                     class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
                   >
                     <!-- !new arrivals col 1 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1308,13 +1400,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1338,13 +1430,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1367,13 +1459,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1395,18 +1487,20 @@
                     </div>
                     <!-- !new arrivals col 1 end -->
                     <!-- !new arrivals col 2 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1430,13 +1524,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1460,13 +1554,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1489,13 +1583,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1520,7 +1614,9 @@
                 </div>
                 <!-- !New arrival End -->
                 <!-- !Trending Start -->
-                <div class="w-full">
+                <div
+                  class="w-full min-w-full md:w-[calc(50%-10px)] md:min-w-[calc(50%-10px)] lg:w-[calc(33.33%-13.33px)] lg:min-w-[calc(33.33%-13.33px)]"
+                >
                   <h2
                     class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
                   >
@@ -1530,18 +1626,20 @@
                     class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
                   >
                     <!-- !Trending col 1 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1565,13 +1663,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1595,13 +1693,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1624,13 +1722,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1652,18 +1750,20 @@
                     </div>
                     <!-- !Trending col 1 end -->
                     <!-- !Trendingcol 2 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1687,13 +1787,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1717,13 +1817,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1746,13 +1846,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1777,7 +1877,9 @@
                 </div>
                 <!-- !Trending End -->
                 <!-- !Toprated Start -->
-                <div class="w-full">
+                <div
+                  class="w-full min-w-full md:w-[calc(50%-10px)] md:min-w-[calc(50%-10px)] lg:w-[calc(33.33%-13.33px)] lg:min-w-[calc(33.33%-13.33px)]"
+                >
                   <h2
                     class="border-b-[1px] pb-2 text-left text-[17px] font-semibold text-[#212121]"
                   >
@@ -1787,18 +1889,20 @@
                     class="my-10 flex w-full min-w-full flex-row gap-5 overflow-hidden overflow-x-scroll"
                   >
                     <!-- !top rated col 1 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1822,13 +1926,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1852,13 +1956,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1881,13 +1985,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/clothes-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1909,18 +2013,20 @@
                     </div>
                     <!-- !top rated col 1 end -->
                     <!-- !top rated col 2 start-->
-                    <div class="flex min-w-full flex-col items-center gap-5">
+                    <div
+                      class="flex w-full min-w-full flex-col items-center gap-5 sm:w-[cals(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-full md:min-w-full"
+                    >
                       <div
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-1.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1944,13 +2050,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-2.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -1974,13 +2080,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-3.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -2003,13 +2109,13 @@
                         class="flex w-full min-w-full flex-row items-center gap-6 rounded-xl border px-6 py-2 text-left"
                       >
                         <img
-                          class="w-[70px]"
+                          class="w-[calc(33.33%-12px)] min-w-[calc(33.3%-12px)]"
                           src="./public/images/products/jacket-4.jpg"
                           alt=""
                         />
                         <div class="overflow-hidden">
                           <h2
-                            class="w-max overflow-hidden overflow-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
+                            class="overflow-hidden text-ellipsis whitespace-nowrap text-[15px] font-semibold capitalize text-[#212121]"
                           >
                             Relaxed short fullddddd
                           </h2>
@@ -2083,14 +2189,16 @@
                 >
                   <!-- *=================== -->
                   <div
-                    class="flex min-w-full flex-col items-center rounded-xl border p-7 sm:flex-row"
+                    class="flex min-w-full flex-col items-center rounded-xl border p-5 xs:p-7 md:flex-row"
                   >
                     <img
                       class="max-w-[50%]"
                       src="./public/images/products/shampoo.jpg"
                       alt=""
                     />
-                    <div class="flex flex-col gap-4 text-left">
+                    <div
+                      class="flex w-full max-w-full flex-col gap-4 text-left"
+                    >
                       <div class="flex">
                         <i
                           class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2150,11 +2258,12 @@
                           class="text-13 font-semibold uppercase text-colorHeading"
                           >HURRY UP! OFFER ENDS IN:</span
                         >
-                        <div class="flex flex-row gap-5">
+                        <div class="flex w-full flex-row gap-5">
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >360</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2162,9 +2271,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >24</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2172,9 +2282,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >59</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2182,9 +2293,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >00</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2198,14 +2310,16 @@
                   <!-- *=================== -->
                   <!-- *=================== -->
                   <div
-                    class="flex min-w-full flex-col items-center rounded-xl border p-7 sm:flex-row"
+                    class="flex min-w-full flex-col items-center rounded-xl border p-5 xs:p-7 md:flex-row"
                   >
                     <img
                       class="max-w-[50%]"
                       src="./public/images/products/jewellery-1.jpg"
                       alt=""
                     />
-                    <div class="flex flex-col gap-4 text-left">
+                    <div
+                      class="flex w-full max-w-full flex-col gap-4 text-left"
+                    >
                       <div class="flex">
                         <i
                           class="fa-solid fa-star text-base font-normal text-colorYellow"
@@ -2265,11 +2379,12 @@
                           class="text-13 font-semibold uppercase text-colorHeading"
                           >HURRY UP! OFFER ENDS IN:</span
                         >
-                        <div class="flex flex-row gap-5">
+                        <div class="flex w-full flex-row gap-5">
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >360</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2277,9 +2392,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >24</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2287,9 +2403,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >59</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2297,9 +2414,10 @@
                             >
                           </div>
                           <div
-                            class="flex flex-col items-center rounded-xl border py-2 px-4"
+                            class="flex flex-col items-center rounded-xl border p-2 sm:py-2 sm:px-4"
                           >
-                            <span class="text-19 font-medium text-colorHeading"
+                            <span
+                              class="text-13 font-medium text-colorHeading sm:text-19"
                               >00</span
                             >
                             <span class="text-11 font-medium text-[#545454]"
@@ -2998,7 +3116,7 @@
         </section>
         <!-- ! testimonial start -->
         <section
-          class="testimoniala layout-container mt-10 flex flex-row flex-wrap items-stretch gap-[30px] justify-center"
+          class="testimoniala layout-container mt-10 flex flex-row flex-wrap items-stretch justify-center gap-[30px]"
         >
           <!-- *testimonial col 1 start -->
           <div
@@ -3040,17 +3158,17 @@
           <!-- *testimonial col 2 start -->
 
           <div
-            class="relative flex  items-center justify-center rounded-3xl md:w-[calc(50%-20px)] md:min-w-[calc(50%-20px)] lg:w-[calc(50%-20px)] lg:min-w-[calc(50%-20px)]"
+            class="relative flex items-center justify-center rounded-3xl md:w-[calc(50%-20px)] md:min-w-[calc(50%-20px)] lg:w-[calc(50%-20px)] lg:min-w-[calc(50%-20px)]"
           >
             <div class="">
               <img
-                class="h-full w-full max-w-full max-h-full rounded-2xl"
+                class="h-full max-h-full w-full max-w-full rounded-2xl"
                 src="./public/images/cta-banner.jpg"
                 alt=""
               />
             </div>
             <a
-              class="absolute flex flex-col items-center gap-3 rounded-lg border bg-[#fcfbfac8] text-center py-7 px-6"
+              class="absolute flex flex-col items-center gap-3 rounded-lg border bg-[#fcfbfac8] py-7 px-6 text-center"
               href=""
             >
               <p
@@ -3083,10 +3201,10 @@
               Our services
             </h2>
             <div
-              class=" flex flex-row flex-wrap items-center lg:gap-4 gap-[30px] md:gap-0 rounded-lg border p-[30px] lg:justify-start justify-center"
+              class="flex flex-row flex-wrap items-center justify-center gap-[30px] rounded-lg border p-[30px] md:gap-0 lg:justify-start lg:gap-4"
             >
               <a
-                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                class="group flex min-w-[190px] flex-row gap-4 text-left"
                 href=""
               >
                 <ion-icon
@@ -3105,7 +3223,7 @@
                 </div>
               </a>
               <a
-                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                class="group flex min-w-[190px] flex-row gap-4 text-left"
                 href=""
               >
                 <ion-icon
@@ -3124,7 +3242,7 @@
                 </div>
               </a>
               <a
-                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                class="group flex min-w-[190px] flex-row gap-4 text-left"
                 href=""
               >
                 <ion-icon
@@ -3143,7 +3261,7 @@
                 </div>
               </a>
               <a
-                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                class="group flex min-w-[190px] flex-row gap-4 text-left"
                 href=""
               >
                 <ion-icon
@@ -3162,7 +3280,7 @@
                 </div>
               </a>
               <a
-                class="group flex flex-row gap-4 text-left min-w-[190px]"
+                class="group flex min-w-[190px] flex-row gap-4 text-left"
                 href=""
               >
                 <ion-icon
@@ -3185,8 +3303,409 @@
           <!-- *testimonial col 3 end -->
         </section>
         <!-- ! testimonial end -->
+        <!-- !blog start -->
+        <section class="blog mt-10">
+          <div
+            class="layout-container mt-10 flex flex-row gap-[30px] overflow-hidden overflow-x-scroll"
+          >
+            <!-- *================== -->
+            <div
+              class="flex min-w-full flex-col gap-0 sm:min-w-[calc(50%-15px)] sm:gap-5 md:min-w-[calc(33.3%-20px)] lg:min-w-[calc(25%-22.5px)]"
+            >
+              <a href="">
+                <img
+                  class="w-full rounded-md"
+                  src="./public/images/blog-1.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="flex flex-col text-left">
+                <a class="text-sm font-normal text-colorHong" href=""
+                  >Fashion</a
+                >
+                <a
+                  class="text-17 font-semibold text-black transition hover:text-colorHong"
+                  href=""
+                  >Clothes Retail KPIs 2021 Guide for Clothes Executives.</a
+                >
+                <p class="text-15 font-normal text-[#545454]">
+                  By Mr Admin / Apr 06, 2022
+                </p>
+              </div>
+            </div>
+            <!-- *================== -->
+            <!-- *================== -->
+            <div
+              class="flex min-w-full flex-col gap-0 sm:min-w-[calc(50%-15px)] sm:gap-5 md:min-w-[calc(33.3%-20px)] lg:min-w-[calc(25%-22.5px)]"
+            >
+              <a href="">
+                <img
+                  class="w-full rounded-md"
+                  src="./public/images/blog-2.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="flex flex-col text-left">
+                <a class="text-sm font-normal text-colorHong" href=""
+                  >Fashion</a
+                >
+                <a
+                  class="text-17 font-semibold text-black transition hover:text-colorHong"
+                  href=""
+                  >Clothes Retail KPIs 2021 Guide for Clothes Executives.</a
+                >
+                <p class="text-15 font-normal text-[#545454]">
+                  By Mr Admin / Apr 06, 2022
+                </p>
+              </div>
+            </div>
+            <!-- *================== -->
+            <!-- *================== -->
+            <div
+              class="flex min-w-full flex-col gap-0 sm:min-w-[calc(50%-15px)] sm:gap-5 md:min-w-[calc(33.3%-20px)] lg:min-w-[calc(25%-22.5px)]"
+            >
+              <a href="">
+                <img
+                  class="w-full rounded-md"
+                  src="./public/images/blog-3.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="flex flex-col text-left">
+                <a class="text-sm font-normal text-colorHong" href=""
+                  >Fashion</a
+                >
+                <a
+                  class="text-17 font-semibold text-black transition hover:text-colorHong"
+                  href=""
+                  >Clothes Retail KPIs 2021 Guide for Clothes Executives.</a
+                >
+                <p class="text-15 font-normal text-[#545454]">
+                  By Mr Admin / Apr 06, 2022
+                </p>
+              </div>
+            </div>
+            <!-- *================== -->
+            <!-- *================== -->
+            <div
+              class="flex min-w-full flex-col gap-0 sm:min-w-[calc(50%-15px)] sm:gap-5 md:min-w-[calc(33.3%-20px)] lg:min-w-[calc(25%-22.5px)]"
+            >
+              <a href="">
+                <img
+                  class="w-full rounded-md"
+                  src="./public/images/blog-4.jpg"
+                  alt=""
+                />
+              </a>
+              <div class="flex flex-col text-left">
+                <a class="text-sm font-normal text-colorHong" href=""
+                  >Fashion</a
+                >
+                <a
+                  class="text-17 font-semibold text-black transition hover:text-colorHong"
+                  href=""
+                  >Clothes Retail KPIs 2021 Guide for Clothes Executives.</a
+                >
+                <p class="text-15 font-normal text-[#545454]">
+                  By Mr Admin / Apr 06, 2022
+                </p>
+              </div>
+            </div>
+            <!-- *================== -->
+          </div>
+        </section>
+        <!-- !blog end -->
       </main>
     </div>
+    <!-- !footer start -->
+    <footer class="footer m-auto mt-10 w-full bg-colorBack">
+      <div class="flex flex-col gap-10 py-10 text-left">
+        
+        <div
+          class="flex flex-col gap-5 border-b-[1px] border-b-[#827c7c4a] px-[15px] pb-10 sm:px-[20px] md:px-[40px] lg:px-[95px]"
+        >
+          <h2 class="text-base font-semibold uppercase text-colorHong">
+            Brand directory
+          </h2>
+          <div class="flex flex-row flex-wrap items-center gap-y-1 gap-x-5">
+            <h3 class="text-sm font-semibold text-[#999999]">Fashion:</h3>
+
+            <a class="footer-link-directory" href="">T-shirt</a>
+            <a class="footer-link-directory" href="">shirt</a>
+            <a class="footer-link-directory" href="">Shorts & Jeans </a>
+            <a class="footer-link-directory" href="">Jacket </a>
+            <a class="footer-link-directory" href=""> Dress & Frock </a>
+            <a class="footer-link-directory" href="">Innerwear</a>
+            <a class="footer-link-directory" href="">Hosiery</a>
+          </div>
+          <div class="flex flex-row flex-wrap items-center gap-y-1 gap-x-5">
+            <h3 class="text-sm font-semibold text-[#999999]">FOOTWEAR:</h3>
+
+            <a class="footer-link-directory" href="">Spoy</a>
+            <a class="footer-link-directory" href="">Formal</a>
+            <a class="footer-link-directory" href="">Boots </a>
+            <a class="footer-link-directory" href="">casual</a>
+            <a class="footer-link-directory" href="">Cowboy shoes</a>
+            <a class="footer-link-directory" href="">Party wear shoes</a>
+            <a class="footer-link-directory" href="">Branded</a>
+            <a class="footer-link-directory" href="">Firstcopy</a>
+            <a class="footer-link-directory" href="">Long shoes</a>
+          </div>
+          <div class="flex flex-row flex-wrap items-center gap-y-1 gap-x-5">
+            <h3 class="text-sm font-semibold text-[#999999]">JEWELLERY :</h3>
+
+            <a class="footer-link-directory" href="">Necklace</a>
+            <a class="footer-link-directory" href="">Earrings</a>
+            <a class="footer-link-directory" href="">Boots</a>
+            <a class="footer-link-directory" href="">Cople tings</a>
+            <a class="footer-link-directory" href=""> Pendants</a>
+            <a class="footer-link-directory" href="">Crystal</a>
+            <a class="footer-link-directory" href="">Bangles</a>
+          </div>
+          <div class="flex flex-row flex-wrap items-center gap-y-1 gap-x-5">
+            <h3 class="text-sm font-semibold text-[#999999]">COSMETICS:</h3>
+
+            <a class="footer-link-directory" href="">Shampoo</a>
+            <a class="footer-link-directory" href="">bodywash</a>
+            <a class="footer-link-directory" href="">facewash</a>
+            <a class="footer-link-directory" href="">makeup kit</a>
+            <a class="footer-link-directory" href="">liner </a>
+            <a class="footer-link-directory" href="">lipstick</a>
+            <a class="footer-link-directory" href="">prefume</a>
+            <a class="footer-link-directory" href="">body soap</a>
+            <a class="footer-link-directory" href="">Liner</a>
+          </div>
+        </div>
+        <div
+          class="flex flex-row flex-wrap gap-x-[20px] gap-y-[50px] border-b-[1px] border-b-[#827c7c4a] px-[15px] pb-10 sm:px-[20px] md:px-[40px] lg:px-[95px]"
+        >
+          <div
+            class="w-full sm:w-[calc(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-[calc(33.3%-15px)] md:min-w-[calc(33.3%-15px)] lg:w-[calc(20%-16px)] lg:min-w-[calc(20%-16px)]"
+          >
+            <h2 class="mb-5 w-max text-15 font-bold text-[#ffffff]">
+              POPULAR CATEGORIES
+            </h2>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Fashion</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >electronic</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >cosmetic</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >health</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >watches</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="w-full sm:w-[calc(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-[calc(33.3%-15px)] md:min-w-[calc(33.3%-15px)] lg:w-[calc(20%-16px)] lg:min-w-[calc(20%-16px)]"
+          >
+            <h2 class="mb-5 w-max text-15 font-bold text-[#ffffff]">
+              PRODUCTS
+            </h2>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Prices Drop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >New Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Best Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="w-full sm:w-[calc(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-[calc(33.3%-15px)] md:min-w-[calc(33.3%-15px)] lg:w-[calc(20%-16px)] lg:min-w-[calc(20%-16px)]"
+          >
+            <h2 class="mb-5 w-max text-15 font-bold text-[#ffffff]">
+              OUR COMPANY
+            </h2>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Delivery</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Legal Notice</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Terms And Conditions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Secure Payment</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="w-full sm:w-[calc(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-[calc(33.3%-15px)] md:min-w-[calc(33.3%-15px)] lg:w-[calc(20%-16px)] lg:min-w-[calc(20%-16px)]"
+          >
+            <h2 class="mb-5 w-max text-15 font-bold text-[#ffffff]">
+              SERVICES
+            </h2>
+            <ul class="flex flex-col gap-1">
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Prices Drop</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >New Products</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Best Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-15 font-normal capitalize text-[#545454] transition hover:text-colorHong"
+                  href=""
+                  >Sitemap</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="w-full sm:w-[calc(50%-10px)] sm:min-w-[calc(50%-10px)] md:w-[calc(33.3%-15px)] md:min-w-[calc(33.3%-15px)] lg:w-[calc(20%-16px)] lg:min-w-[calc(20%-16px)]"
+          >
+            <h2 class="mb-5 w-max text-15 font-bold text-[#ffffff]">CONTACT</h2>
+            <ul class="flex flex-col gap-2">
+              <li class="flex flex-row gap-2">
+                <i
+                  class="fa fa-location-arrow text-[25px] font-normal capitalize text-[#545454]"
+                  aria-hidden="true"
+                ></i>
+
+                <p class="text-15 font-normal capitalize text-[#545454]">
+                  419 State 414 Rte Beaver Dams, New York(NY), 14812, USA
+                </p>
+              </li>
+              <li class="flex flex-row gap-2">
+                <ion-icon
+                  class="text-[25px] font-normal capitalize text-[#545454]"
+                  name="call-outline"
+                ></ion-icon>
+                <p class="text-15 font-normal capitalize text-[#545454]">
+                  +(84)989 554 045
+                </p>
+              </li>
+              <li class="flex flex-row gap-2">
+                <ion-icon
+                  class="text-[25px] font-normal capitalize text-[#545454]"
+                  name="mail-unread-outline"
+                ></ion-icon>
+                <p class="text-15 font-normal capitalize text-[#545454]">
+                  tuyen100495@gmail.com
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="m-auto px-[15px] text-center sm:px-[20px] md:px-[40px] lg:px-[95px]">
+          <img
+            class="m-auto mb-5 w-full max-w-[355px]"
+            src="./public/images/payment.png"
+            alt=""
+          />
+          <p class="text-15 font-medium text-colorParagrap">
+            Copyright © Anon All Rights Reserved.
+          </p>
+        </div>
+      </div>
+     
+    </footer>
+    <!-- !footer end -->
+
     <script src="./public/script.js"></script>
   </body>
 </html>
